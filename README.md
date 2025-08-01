@@ -29,8 +29,7 @@ This project is a Python-based honeypot web server featuring real-time attack pa
 git clone https://github.com/REVEAL1001/Honeypot-With-Attack-Pattern-Detection-Tkinter-GUI.git
 cd Honeypot-With-Attack-Pattern-Detection-Tkinter-GUI
 pip install user-agents
-
-# Honeypot
+```
 
 ## Usage
 
