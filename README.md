@@ -29,3 +29,73 @@ This project is a Python-based honeypot web server featuring real-time attack pa
 git clone https://github.com/REVEAL1001/Honeypot-With-Attack-Pattern-Detection-Tkinter-GUI.git
 cd Honeypot-With-Attack-Pattern-Detection-Tkinter-GUI
 pip install user-agents
+
+# Honeypot
+
+## Usage
+
+### Start the Application
+- Launch `honeypot.py` to open the GUI.
+
+### Select Port
+- Enter the port number (default: **8080**) and click **Start Server**.
+
+### Monitor Activity
+- Visitor details and attack alerts show in real time.
+
+### Export Logs
+- Click **Export Logs** to save logs.
+
+### Stop Server
+- Click **Stop Server** when finished.
+
+---
+
+## GUI Overview
+
+- **Port Selection**: Set the honeypot server port.
+- **Start/Stop Buttons**: Manage the server.
+- **Visitor Table**: View all visitors.
+- **Log Viewer**: See activity, requests, and detected attacks.
+- **Export Logs**: Save logs as `.log` files.
+
+---
+
+## Security Patterns Detected
+
+The honeypot is capable of detecting several suspicious behaviors and attack patterns:
+
+### SQL Injection
+Examples: `OR 1=1`, `UNION SELECT`, `SLEEP(n)`
+
+### Cross-Site Scripting (XSS)
+Examples: `<script>` tags, JavaScript event handlers like `onload`, `onclick`
+
+### Path Traversal
+Examples: `../`, `/etc/passwd`, `.env`
+
+### Dirsearch Scans
+High-frequency automated directory or file requests from the same IP.
+
+### Reverse Shell Upload Attempts
+Indicators include uploaded bash scripts, use of `nc`, `exec`, and other command injection attempts.
+
+---
+
+## Evidence Storage
+
+- All suspicious uploaded files are stored in the `evidence/` folder for further analysis.
+
+---
+
+## Disclaimer
+
+> ⚠️ **This project is intended for educational and research purposes only.**  
+> Do **not** deploy this honeypot in production environments.  
+> Always obtain proper **authorization** before deploying or testing in any real-world network.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
